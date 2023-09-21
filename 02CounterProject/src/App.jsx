@@ -9,9 +9,16 @@ function App() {
   function increaseValue() {
     if (counterVariable < 10) {
       // UseState update the UI in batches or group so, because there is no change in any function call the value updation remain same as previous
-      setCounterVariable(counterVariable + 1);
-      setCounterVariable(counterVariable + 1);
-      setCounterVariable(counterVariable + 1);
+      // setCounterVariable(counterVariable + 1);
+      // setCounterVariable(counterVariable + 1);
+      // setCounterVariable(counterVariable + 1);
+
+      // How to do, if we want to update like this, then->
+      setCounterVariable((prevCounter) => prevCounter + 1);
+      setCounterVariable((prevCounter) => prevCounter + 1);
+      setCounterVariable((prevCounter) => prevCounter + 1);
+
+      // ans -> with the help of prevCounter we can do that
     }
   }
 
